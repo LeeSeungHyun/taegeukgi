@@ -1,0 +1,106 @@
+.container {
+  width: 900px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 0.5px solid black;
+}
+
+.item:nth-child(1),
+.item:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+
+.item > div {
+  flex-grow: 1;
+}
+
+.item:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+.inner-container {
+  position: relative;
+}
+
+.gun,
+.gon,
+.gam,
+.lee {
+  width: 100px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12.5px;
+}
+
+.gun {
+  position: absolute;
+  top: 64px;
+  right: 34px;
+  transform: rotate(35deg);
+}
+
+.gam {
+  position: absolute;
+  top: 64px;
+  left: 34px;
+  transform: rotate(-35deg);
+}
+
+.gon {
+  position: absolute;
+  bottom: 64px;
+  left: 34px;
+  transform: rotate(35deg);
+}
+
+.lee {
+  position: absolute;
+  bottom: 64px;
+  right: 34px;
+  transform: rotate(-35deg);
+}
+
+.long-type {
+  height: 100%;
+  background-color: black;
+}
+
+.shot-type {
+  display: flex;
+  flex-direction: column;
+  gap: 12.5px;
+}
+
+.shot-type > div {
+  flex-grow: 1;
+  background-color: black;
+}
+
+.center {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(to bottom, #cd2e3a 50%, #0047a0 50%);
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  border: 0;
+  transform: rotate(35deg);
+}
+
+.center > .red-circle {
+  width: 150px;
+  height: 150px;
+  background-color: #cd2e3a;
+  border-radius: 50%;
+}
+
+.center > .blue-circle {
+  width: 150px;
+  height: 150px;
+  background-color: #0047a0;
+  border-radius: 50%;
+}
